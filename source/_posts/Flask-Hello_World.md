@@ -1,6 +1,6 @@
 ---
 title: Flask 的Hello World
-date: 2017-10-15 22:49:26
+date: 2017-10-10 22:49:26
 tags: Flask
 ---
 * Flask 是一个python世界的微框架, 由于python世界的web服务器一般都是和web框架分离的.
