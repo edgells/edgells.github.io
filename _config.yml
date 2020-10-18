@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: edgells blog
-subtitle: 'edgells 的技术文章'
+title: edges blog
+subtitle: '关于计算机的技术文章'
 description: ''
 keywords: python, java
-author: Edgells
+author: Edges
 language: zh-CN
 timezone: 'Asia/Shanghai'
 
