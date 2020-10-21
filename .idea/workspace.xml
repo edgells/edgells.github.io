@@ -19,11 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b512e6b3-4ffd-41ea-bcdf-eab462864f91" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/Flask-Hello_World.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/Flask-Hello_World.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/python-中的-dataclasses.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/python-中的-dataclasses.md" afterDir="false" />
-    </list>
+    <list default="true" id="b512e6b3-4ffd-41ea-bcdf-eab462864f91" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,6 +67,7 @@
       <workItem from="1603256231897" duration="3150000" />
       <workItem from="1603262380065" duration="10000" />
       <workItem from="1603270475241" duration="2355000" />
+      <workItem from="1603289534583" duration="321000" />
     </task>
     <servers />
   </component>
