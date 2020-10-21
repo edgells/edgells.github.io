@@ -4,5 +4,9 @@ date: 2017-06-17 23:20:24
 tags: python
 ---
 
-#### python 中原来也有类似kotlin 中dataclass
+#### python 中原来也有类似kotlin 中 dataclass
 
+```python
+from dataclasses import dataclass
+
+```

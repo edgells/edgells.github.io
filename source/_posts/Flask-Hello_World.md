@@ -3,13 +3,13 @@ title: Flask 的Hello World
 date: 2017-10-10 22:49:26
 tags: Flask
 ---
-* Flask 是一个python世界的微框架, 由于python世界的web服务器一般都是和web框架分离的.
+* Flask 是一个python世界的微框架, 由于python语言的web服务器一般都是和web框架分离的.
   现在就来看看它有多么微
 
 * pip install flask  
 * 创建一个python 脚本
 ```python
-    from flask import Flaske
+    from flask import Flask
     
     # 实例化 Flask app 对象 
     app = Flask(__name__)
