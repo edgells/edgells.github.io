@@ -2,9 +2,6 @@
 title: redis 基本数据结构
 date: 2020-10-21 13:17:22
 tags: Redis
-categories:
--redis
--Nosql
 ---
 ### Redis 基本数据结构
 
