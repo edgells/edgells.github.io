@@ -1,15 +1,15 @@
 ---
 title: rest fm data validator
-date: 2020-10-22 16:46:14
+date: 2018-6-10 16:46:14
 tags: rest, validator
 ---
 ### Rest Framework 参数效验
 
 在Django 和 RestFramework结合中, 我们需要定义一个serializer用来处理序列化和反序列化数据
-而在对数据的验证, 需要在serializer 中定义
-每个验证函数内部应该只有两种结果,
-        1. 成功正常 return value
-        2. 失败使用 serializers.ValidationError(message) 抛出错误信息到上层, 并返回响应
+而在对数据的验证, 需要在serializer 中定义每个验证函数内部应该只有两种结果,
+
+1. 成功正常 return value
+2. 失败使用 serializers.ValidationError(message) 抛出错误信息到上层, 并返回响应
 
 
 ```python
@@ -47,4 +47,5 @@ update 使用时, 需要将数据对象传递, 并传入更新的字段值, 数�
 
 serializer().is_valid() 验证数据, 结果返回 True/False
 serializer().save()     保存数据
+serializer.data         获取序列化后的数据
 
