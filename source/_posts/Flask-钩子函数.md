@@ -34,8 +34,38 @@ tags: Flask 钩子函数
 说完了Flask 提供给的钩子, 哪么我们具体来说一下它们的实际应用场景
 
 before_request 在请求进入视图函数之前做处理, 哪么我们想想, 哪些是需要在处理请求之前要做的事情.
-
 * 验证用户信息
 * 验证用户权限
 * 验证请求参数
+* 对请求头进行验证, 尤其是跨域中, 我们需要对指定的请求头做处理.
 * 甚至为用户request 的添加属性, 或者绑定方法
+
+而这些操作都需要或者间接需要对request 做处理哪么, 在使用时, 需要导入request
+```python
+from flask import Flask, request, make_response
+
+app = Flask(__name__)
+
+allowed_host = ['www.host.com']
+
+
+@app.before_request
+def handler_cors_request():
+    """
+        处理跨域问题
+    """
+    origin = request.headers['origin']
+
+    if origin not in allowed_host:
+        return make_response()
+
+@app.after_request
+def handler_cors_response(response):
+    """
+        cors 最主要的是在返回响应时, 服务端告诉前端, 是否允许跨域, cookie能不能, headers 能不能跨域
+    """
+    response.set_headers("Access-Control-Allow-Origin", request.full_path)
+    response.set_headers("Access-Control-Allow-Credentials", True)
+    response.set_headers("Content-Type", "application/json")
+    
+```
