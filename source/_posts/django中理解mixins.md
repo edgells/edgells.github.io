@@ -19,7 +19,7 @@ Rf 主要提供了视图扩展和数据序列化和反序列化, 两者共同合
 而GenericAPIView 通过封装了, 多个通用的操作:
 
 * get_queryset(self)
-    获取查询集
+    1. 获取查询集
     
 * get_object(self)
     1. 获取过滤后的查询集
@@ -65,7 +65,7 @@ from rest_framework import serializers
 from .models import User 
 class UserSerializer(serializers.ModelSerialzier):
     password = serializers.CharField(max_length=1024, write_only=True)      # 声明此字段只用做反序列化
-
+    
     class Meta:
         model= User
         fields = '__all__'
@@ -101,3 +101,10 @@ path('/<int:id>/', RegisterFulView.as_view())   # api参数要和视图中定义
 最后在urls 中注册路由, 然后你就完成了这个用户注册的接口. 什么这就完成了, 并且我们还完成了用户的信息获取
 是不是不可思议, 的确有点扯. 但就是完成了, 借助python的动态特性和mixin模式, 完成了api.
 注意我们的参数效验rest在底层帮我们做了, 但是验证规则没有, 所以我们还需要定义验证规则. 这个内容在rest framework 中有提到, 有兴趣的同学可以翻过去看看
+
+##### 总结:
+结合rest 实现api时
+1. 找一个符合当前业务的GenericAPIView
+2. 定义好serializer 和model
+3. 定义好指定字段的验证逻辑
+4. 注册你的api
