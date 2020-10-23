@@ -22,6 +22,7 @@
     <list default="true" id="b512e6b3-4ffd-41ea-bcdf-eab462864f91" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/_posts/redis-基本数据结构.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/redis-基本数据结构.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/分布式之负载均衡.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/分布式之负载均衡.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +77,8 @@
       <workItem from="1603262380065" duration="10000" />
       <workItem from="1603270475241" duration="2355000" />
       <workItem from="1603289534583" duration="3675000" />
-      <workItem from="1603345484498" duration="11614000" />
+      <workItem from="1603345484498" duration="13947000" />
+      <workItem from="1603375455523" duration="1939000" />
     </task>
     <servers />
   </component>
