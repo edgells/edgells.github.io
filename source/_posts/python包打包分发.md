@@ -24,10 +24,33 @@ packaging_tutorial
 * setup.py 用来build 包的脚本
 
 在整个build过程中我们只需要编写setup.py 中的一些信息即可
+```python
+from setuptools import setup
+# setup
+setup(
+    name='sample',   # 用于在pypi上面显示的名字
+    version='1.2.0',    # 项目的当前版本
+    description='A sample Python project',
+    long_description='',
+    long_description_content_type='text/x-rst', 
+    url='https://github.com/xxxx/sampleproject',    # 项目的托管地址
+    author='A. Random Developer',
+    author_email='author@example.com',
+    license='MIT',
+    keywords='sample setuptools development', #用于此项目的搜索关键字
+    install_requires=['peppercorn'],    # 此项目的依赖
+    python_requires='>=3',          # 支持的python 版本
+    # 还有许多暂时用不到的选项...
+)
 
+```
 
-然后通过python 执行setup
+* 然后通过python 执行setup, 就会在当前工程下, dist目录创建一个tar格式的压缩包.
 ```
 python setup.py sdist
 ```
-就会在当前工程下, dist目录创建一个tar格式的压缩包.
+* 如果需要打包成wheel
+```
+pip install wheel
+python setup.py bdist_wheel
+```
