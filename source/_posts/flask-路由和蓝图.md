@@ -1,6 +1,6 @@
 ---
 title: Flask 路由和蓝图
-date: 2020-11-03 16:45:50
+date: 2017-10-10 16:45:50
 tags: Flask, route, Blueprint
 ---
 ### Flask - Route - Blueprint
