@@ -10,7 +10,6 @@ eventlet 基于epoll IO模型实现非阻塞io, 并封装了greenlet实现协程
 通过翻看文档和借鉴 openstack的处理方式.
 
 ```python
-# custom sqlalchemy conn pool
 from flask import Flask
 from sqlalchemy import pool
 from flask_sqlalchemy import Sqlaclhemy
@@ -20,6 +19,7 @@ import mysqldb
 app = Flask(__name__)
 
 
+# 方式一
 # 此方法来源于openstack nova 注意使用MySQLldb
 app.config['SQLALCHEMY_ENGINE_OPTIONS'] = {'creater': eventlet.pool.ConnectionPool(MySQLdb, **url_args).create}
 db = Sqlaclhemy(app)
