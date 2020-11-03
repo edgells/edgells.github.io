@@ -6,5 +6,5 @@ tags: Mysql
 
 ### Mysql 事务级别
 
-
-
+* 串行 serializer
+* 

@@ -29,7 +29,7 @@ session = LocalProxy(partial(_lookup_req_object, "session"))
 g = LocalProxy(partial(_lookup_app_object, "g"))
 
 ``` 
-在全局范围内有, 一个 _request_ctx_stack, _app_ctx_stack, 它们分别存储了当前请求的上下文环境. 哪么根据flask 支持的服务器并发模型, 主线程创建新连接, 子线程处理新连接.
+在全局范围内有一个 _request_ctx_stack, _app_ctx_stack, 它们分别存储了当前请求的上下文环境. 哪么根据flask 支持的服务器并发模型, 主线程创建新连接, 子线程处理新连接.
 哪么势必有一个问题, 就是多线程的线程安全问题. 而flask 通过一个线程安全的LocalStack() 来隔离每个线程的上下文环境, 换句话讲就是每个线程有自己单独的数据存储区域. 而在LocalStack中
 使用了dict 并使用 threadId/greenletId 作为key, 存储不同线程的上下文环境. 注意这个地方才是最巧妙的. 也就是说Flask 在设计的时候就想到了可能需要通过greenlet方式实现并发, 哪么也就是说
 使用greenlet 作为底层支持的库, Flask都可以使用.
@@ -37,5 +37,5 @@ g = LocalProxy(partial(_lookup_app_object, "g"))
 往往我们可能需要重新造轮子.
 
 哪么回到上下文的地方来, 还有另一个好处就是, 对于当前的request 对象和app 对象, 可以在请求周期的任何地方出现, 哪么在编写非视图函数的工具类当中, 直接引入request 和 current_app, 就是能够对当前请求的
-上下文做操作. 不得不说, 这样设计的巧妙. 但是,需要注意这两个对象都是通过代理模式拿到的对象, 如果需要对实际的对象做操作需要通过 对象的 _get_current_object实例方法获取当前的对象.
+上下文做操作. 不得不说这样设计的巧妙. 但是,需要注意这两个对象都是通过代理模式拿到的对象, 如果需要对实际的对象做操作需要通过对象的 _get_current_object实例方法获取当前的对象.
 哪么session 对象和 g 对象的作用就不在详解了.

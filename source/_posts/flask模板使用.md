@@ -44,8 +44,8 @@ jinja2 解决了特殊字符转义功能, 这个在对于一些不安全的字�
 
 {% endif%}
 ```
-当然这些还不能体现这个框架和flask 结合的强大之处哪么现在我们来看一下flash() 这个前后端不分离开发中的常用工具
-这个工具需要在模板中使用 get_flashed_messages() 获取传递的数据.
+当然这些还不能体现这个框架和flask 结合的强大之处, 哪么现在我们来看一下flash() 在下一次请求中获取上次一响应的消息, 咋一看挺绕的.
+使用这个工具需要在模板中使用 get_flashed_messages() 获取传递的数据.
 ```python
 from flask import Flask, render_template, flash
 

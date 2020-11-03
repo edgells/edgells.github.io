@@ -13,10 +13,11 @@ tags: rest, validator
 
 
 ```python
+from rest_framework import serializser
 
 class XXXSerializer(serializser.Serializer):
-    id = serializers.IntegerField()    
-    username = serialisers.CharField(max_length=1024)
+    id = serializser.IntegerField()    
+    username = serializser.CharField(max_length=1024)
 
     class Meta:
         fields = ['id', 'username', 'password',...]
@@ -45,7 +46,9 @@ def validator_username(value):
 两者区别在, create 由于数据创建, 此时并不需要数据对象, 数据传递给data接收
 update 使用时, 需要将数据对象传递, 并传入更新的字段值, 数据传递 instance=model_obj, data=update_data
 
-serializer().is_valid() 验证数据, 结果返回 True/False
+serializer().is_valid() 验证数据, 结果返回 True/False   
+如果 is_valid 传递 raise_exception=True 参数时, 异常将会抛出到调用方由调用方处理
+
 serializer().save()     保存数据
 serializer.data         获取序列化后的数据
 
