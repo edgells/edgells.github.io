@@ -6,4 +6,4 @@ tags:
 ### Flask 上下文的应用
 
 
-![flask_request_stack](/flask-上下文应用/flask_request_push_stack.png)
+![flask_request_push_stack](/images/flask_request_push_stack.png)

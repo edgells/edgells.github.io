@@ -20,9 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b512e6b3-4ffd-41ea-bcdf-eab462864f91" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/Flask-shell-的便利性.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/Flask-shell-的便利性.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/Flask-sqlalchemy-使用.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/Flask-sqlalchemy-使用.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/flask-上下文应用.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/flask上下文应用.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/flask-上下文应用/flask_request_push_stack.png" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/flask上下文应用/flask_request_push_stack.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +50,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/img" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/source/images" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
@@ -91,7 +90,7 @@
       <workItem from="1603375455523" duration="1939000" />
       <workItem from="1603438946044" duration="2589000" />
       <workItem from="1603852348745" duration="1168000" />
-      <workItem from="1604372601367" duration="16903000" />
+      <workItem from="1604372601367" duration="17238000" />
     </task>
     <servers />
   </component>
