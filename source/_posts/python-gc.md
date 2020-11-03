@@ -1,6 +1,6 @@
 ---
 title: python gc
-date: 2020-10-21 19:19:27
+date: 2018-10-21 19:19:27
 tags: python, gc, 内存管理
 ---
 

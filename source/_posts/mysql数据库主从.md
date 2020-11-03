@@ -1,6 +1,6 @@
 ---
 title: mysql数据库主从
-date: 2020-10-23 15:42:45
+date: 2017-10-21 15:42:45
 tags: Mysql, 主从
 ---
 ### Mysql 主从

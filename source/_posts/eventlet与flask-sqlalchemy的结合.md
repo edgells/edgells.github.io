@@ -14,13 +14,14 @@ from flask import Flask
 from sqlalchemy import pool
 from flask_sqlalchemy import Sqlaclhemy
 import eventlet.pool
-import mysqldb
+import MySQLdb
 
 app = Flask(__name__)
 
 
 # 方式一
 # 此方法来源于openstack nova 注意使用MySQLldb
+url_args = {}
 app.config['SQLALCHEMY_ENGINE_OPTIONS'] = {'creater': eventlet.pool.ConnectionPool(MySQLdb, **url_args).create}
 db = Sqlaclhemy(app)
 

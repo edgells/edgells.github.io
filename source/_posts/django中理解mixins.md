@@ -1,6 +1,6 @@
 ---
 title: django中理解mixins
-date: 2020-10-22 13:45:01
+date: 2017-10-22 13:45:01
 tags: Django, 设计模式
 ---
 
