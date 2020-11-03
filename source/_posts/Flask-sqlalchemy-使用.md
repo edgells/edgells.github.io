@@ -22,6 +22,13 @@ app = Flask(__name__)   # 实例化app
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://username:password@host:port/dbname'
 app.config['SQLALCHEMY_ECHO'] = True    # 用来显示每次对数据库的操作
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True     # 这个参数需要占用过多的内存来支持Flask-sqlalchemy 所提供的信号， 可以根据业务需要调整
+app.config['SQLALCHEMY_BINDS'] = {}     # 多数据库字典用来实现连接多个数据库    {db1 : db_url, db2: db_url}
+app.config['SQLALCHEMY_ENGINE_OPTIONS'] = {}    # 如果使用MySQLdb 可以在这里传递 creater 并利用eventlet 的功能
+# conn pool config
+app.config['SQLALCHEMY_POOL_SIZE'] = 5  # default 5
+app.config['SQLALCHEMY_POOL_TIMEOUT'] = 1 # second
+app.config['SQLALCHEMY_POOL_RECYCLE'] = 3600 # second 连接超时时间
+app.config['SQLALCHEMY_MAX_OVERFLOW'] = 10 # 连接池被占用之后, 所有能溢出申请的连接数量
 
 
 db = Sqlalchemy(app)    
@@ -41,11 +48,11 @@ db.session.add(user)
 db.session.commit()
 
 # select
-user = User.query.filter(User.id == 1).first()  # 通过模型类查询, 一般简单的查询都可以通过模型类完成
-user = db.session.query(User).filter(User.id == 1).first()  # 通过db 连接完成查询, 一般会有一些复杂的操作, 比如多表join, 应该考虑使用db, 并封装在model层面
+User.query.filter(User.id == 1).first()  # 通过模型类查询, 一般简单的查询都可以通过模型类完成, 不存在返回None
+db.session.query(User).filter(User.id == 1).first()  # 通过db 连接完成查询, 一般会有一些复杂的操作, 比如多表join, 应该考虑使用db, 并封装在model层面
 
 # update
-user = User.query.filter()
+User.query.filter()
 user.name = 'test1'
 db.session.add(user)
 db.session.commit()
