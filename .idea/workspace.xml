@@ -21,9 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="b512e6b3-4ffd-41ea-bcdf-eab462864f91" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/Flask-sqlalchemy-使用.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/Flask-sqlalchemy-使用.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/Flask-信号.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/Flask-信号.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/_posts/mysql数据库主从.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/mysql数据库主从.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/redis-基本数据结构.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/redis-基本数据结构.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/python-gc.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/python-gc.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +83,7 @@
       <workItem from="1603375455523" duration="1939000" />
       <workItem from="1603438946044" duration="2589000" />
       <workItem from="1603852348745" duration="1168000" />
-      <workItem from="1604372601367" duration="684000" />
+      <workItem from="1604372601367" duration="10926000" />
     </task>
     <servers />
   </component>
