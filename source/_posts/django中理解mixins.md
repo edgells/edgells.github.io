@@ -3,7 +3,7 @@ title: django中理解mixins
 date: 2017-10-22 13:45:01
 tags: Django, 设计模式
 ---
-
+#### ***本文章内容归作者所有, 如需转载请注明来源***
 ### Django Rest framework 体现的Mixin 模式
 
 刚开始接触 rest framework 时, 有点难以理解. 甚至并没有掌握到这个框架的好处(最大的好处在于,快速撸完接口下班), 甚至因为性能问题没有对这个框架有一个全面的认识.

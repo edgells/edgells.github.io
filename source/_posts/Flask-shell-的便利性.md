@@ -29,7 +29,7 @@ flask routes
 ```
 flask shell
 ```
-
+#### ***本文章内容归作者所有, 如需转载请注明来源***
 1. flask cli
 我们在使用migrate 的时候, 会发现安装扩展之后提供migrate命令, 而这个命令是怎么加入的呢
 ```python

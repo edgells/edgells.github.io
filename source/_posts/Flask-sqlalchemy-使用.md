@@ -3,7 +3,7 @@ title: Flask-sqlalchemy 使用
 date: 2017-10-10 13:00:01
 tags: Flask, Sqlalchemy, db
 ---
-
+#### ***本文章内容归作者所有, 如需转载请注明来源***
 #### Flask-Sqlalchemy 通过扩展Sqlalchemy 在Flask中引入完善的ORM功能
 ORM 是一种工具思想, 不管在哪个语言里面基本上都是通过映射元数据和表, 字段类型, 建立关联.
 而Sqlalchemy 是python世界比较出色的orm框架, 在设计上很多地方都借鉴了Java Hibernate的设计思想. 所以在很多地方它们都具有共同性.

@@ -3,6 +3,7 @@ title: flask模板使用
 date: 2017-10-10 18:26:17
 tags: Flask, template
 ---
+#### ***本文章内容归作者所有, 如需转载请注明来源***
 ## Flask 模板使用
 Flask 模板在jinja2 库之上进行一层封装, 便于在flask 中使用
 而我们要想使用jinja2 所提供的完整功能, 可以根据需要查看官方文档. 

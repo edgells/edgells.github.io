@@ -3,6 +3,7 @@ title: Flask 的Hello World
 date: 2017-10-10 22:49:26
 tags: Flask
 ---
+#### ***本文章内容归作者所有, 如需转载请注明来源***
 * Flask 是一个python世界的微框架, 由于python语言的web服务器一般都是和web框架分离的.
   现在就来看看它有多么微
 

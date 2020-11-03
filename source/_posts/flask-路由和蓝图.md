@@ -3,6 +3,7 @@ title: Flask 路由和蓝图
 date: 2017-10-10 16:45:50
 tags: Flask, route, Blueprint
 ---
+#### ***本文章内容归作者所有, 如需转载请注明来源***
 ### Flask - Route - Blueprint
 
 在 flask 中创建路由是一件简单事情

@@ -3,6 +3,7 @@ title: rest fm data validator
 date: 2017-6-10 16:46:14
 tags: rest, validator
 ---
+#### ***本文章内容归作者所有, 如需转载请注明来源***
 ### Rest Framework 参数效验
 
 在Django 和 RestFramework结合中, 我们需要定义一个serializer用来处理序列化和反序列化数据

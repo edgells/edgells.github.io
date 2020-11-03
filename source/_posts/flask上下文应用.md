@@ -3,6 +3,7 @@ title: flask 上下文应用
 date: 2017-10-11 17:53:41
 tags:
 ---
+#### ***本文章内容归作者所有, 如需转载请注明来源***
 ### Flask 上下文的应用
 在flask 中存在两个上下文, request_context, app_context. 在项目中我们经常会用到. 哪么它们的底层原理是什么样的呢?
 答案在Flask.wsgi_app函数的源码中, 描述的很清楚. 当一个请求进入时, 会为这个请求创建一个request_context, 并将其推入stack 中. 

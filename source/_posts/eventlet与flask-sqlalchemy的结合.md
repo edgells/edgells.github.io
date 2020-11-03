@@ -3,7 +3,7 @@ title: Eventlet与flask-sqlalchemy的结合
 date: 2018-11-03 14:36:19
 tags: Eventlet, Flask, Sqlalchemy
 ---
-
+#### ***本文章内容归作者所有, 如需转载请注明来源***
 ###  Eventlet与 flask-sqlalchemy的结合
 在python中, 常因为性能原因苦恼, 偶然之间发现了eventlet 这个神器, 用来在单线程中模拟协程操作搭配多个gunicorn进程实现并发的手段.
 eventlet 基于epoll IO模型实现非阻塞io, 并封装了greenlet实现协程调度. 但由于python解释器的一些限制. 在一些orm中不能直接使用.
