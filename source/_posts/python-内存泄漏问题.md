@@ -12,3 +12,6 @@ tags: Python, Memory
 
 ##### Python Memory 查看工具:
 1. 
+
+
+2 tracema

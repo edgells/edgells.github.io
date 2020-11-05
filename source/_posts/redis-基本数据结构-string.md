@@ -17,7 +17,7 @@ tags: Redis
 本文不会像官方文档那样, 一步一步介绍redis 的相关命令, 而是从实际业务出发去使用相对应的数据结构.
 
 ##### example1
-  先来一个热身, redis -string 数据结构
+  先来一个热身, redis string 数据结构
   在使用之前, 我们必须要对这个数据结构的一些属性有所了解
   
   1. string数据结构存储的数据类型可以是字符串, 也可以是二进制数据
@@ -27,25 +27,33 @@ tags: Redis
   
   1. 用作用户状态保持
       * 一般用户状态可以, 转换成字符串形式, 保存在redis当中.
+      ```
+        set user:{id}:session: value expire
+     ```
       
   2. 用作缓存
       * 比如博客, 用title或者作者做key, 内容存入redis string中.
       * 比如一个函数的执行结果, 保存在string中
       * 验证码存储
+      ```
+        set cache:{objectType}:{objectName}:{id} value expire
+     ```
       
   3. lock实现:
       * 在多台服务器的情况下, 对一个数据的并发修改, 势必需要引入某种同步机制. 分布式锁实现
       ```
-        set key value nx // 当key存在的时候key是无法设置成功的， 就好像后去锁一样， 存在就需要阻塞。
+        set key value nx // 当key存在的时候key是无法设置成功的， 就好像去拿锁一样， 存在就需要阻塞。
         
-        set key value nx 
+        set key value ex[second]|px[milliseconds] nx // 当设置lock机器故障的时候, lock需要释放, 这个时候超时机制就很有必要了
+        
+         
      ```
   
   4. 原子操作:
       * redis 内部提供的原子操作, incr. 比如在并发场景下, 针对秒杀商品通过提前载入商品数据, 在业务期间.通过原子递增的特性
       保证商品数据的竞争安全. 结合queue实现秒杀业务下单逻辑
       ```
-        set 
+         
      ```
       
       * 同时也可以当作计数器使用, 比如某个文章的阅读次数, 某个商品的浏览次数
