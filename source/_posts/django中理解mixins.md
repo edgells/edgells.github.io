@@ -91,11 +91,9 @@ class RegisterFulView(generics.CreateAPIView,
 
 urls.py
 ```python
-
 # 二级 url
 path('/create/', RegisterFulView.as_view())
 path('/<int:id>/', RegisterFulView.as_view())   # api参数要和视图中定义的一致
-
 ```
 
 最后在urls 中注册路由, 然后你就完成了这个用户注册的接口. 什么这就完成了, 并且我们还完成了用户的信息获取
