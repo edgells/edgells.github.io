@@ -50,5 +50,14 @@ Model.query(Model).filter(
      Model.field.like("__d%")
 ).all()
 
-# 
+# 如果还不能满足你, 可以使用文本sql
+from sqlalchemy import text
+db.session.query(Model).filter(text('id > :value_id')).params(value_id=10).first()
+# 或者
+db.session.query(Model).from_statement(text('select * from table where expr')).params().first()
+
+# 在sqlalchemy 中join 查询分为 外键和非外键
+# 如果两张表之间存在外键关系
+session.query(User).join(Address).filter()
+
 ```
